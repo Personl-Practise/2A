@@ -1,5 +1,9 @@
 name: Practising with events
-on: [push, pull_request, issues]
+on: 
+    push:
+    pull_request:
+        types: [opened, assigned, synchronize, reopened]
+    issues:
 
 jobs:
     checkout-test:
