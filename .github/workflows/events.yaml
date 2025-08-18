@@ -1,9 +1,10 @@
-name: Practising with events
+name: Practising Events
 on: 
     push:
     pull_request:
         types: [opened, assigned, synchronize, reopened]
     issues:
+        types: opened
 
 jobs:
     checkout-test:

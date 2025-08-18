@@ -1,0 +1,13 @@
+name: Workflow Run
+
+on:
+  workflow_run:
+    workflows: ["Practising Events"]   # name of the workflow to watch
+    types: [completed]
+
+jobs:
+  echo-string:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo message
+        run: echo "running because the previous workflow was successful"
